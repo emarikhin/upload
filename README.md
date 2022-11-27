@@ -23,6 +23,7 @@
 - cd `logsUpload`
 - git clone <project>
 - Configure `config/default.json`
+- Create a folder for archived logs, i.e. `archived_logs`
 - Implement `dumplogs.sh` based on your vision of the log collection
 - Configure `crontab -e`. Example here:
 
