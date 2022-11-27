@@ -90,19 +90,22 @@ async function deleteFile(fileId) {
 }
 
 async function deleteFiles(files) {
-  var filesToBeDeleted = files.slice(1,files.length);
+  if (!!files) {
+    var filesToBeDeleted = files.slice(1,files.length);
 
-  console.log("filesToBeDeleted", filesToBeDeleted);
-
-  if (!!filesToBeDeleted.length) {
-    filesToBeDeleted.map((file) => {
-      var fileId = file.id;
-      console.log("deleting ", fileId);
-      return deleteFile(fileId);
-    });
-  } else {
-    console.log('Nothing to delete. Skipping...');
+    console.log("filesToBeDeleted", filesToBeDeleted);
+  
+    if (!!filesToBeDeleted.length) {
+      filesToBeDeleted.map((file) => {
+        var fileId = file.id;
+        console.log("deleting ", fileId);
+        return deleteFile(fileId);
+      });
+    } else {
+      console.log('Nothing to delete. Skipping...');
+    }
   }
+  console.log('Cloud folder is empty');
 }
 
 /**
