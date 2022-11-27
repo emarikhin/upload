@@ -1,13 +1,13 @@
 #!/bin/bash
 
 TIMESTAMP=`date +%F'T'%H-%M-%S`
-FULLNAME=journalctl_server"$TIMESTAMP".tar.gz
+FULLNAME=aleo_server"$TIMESTAMP".tar.gz
 cd /root
 
-journalctl > /root/logs/journalctl_server.log
-sleep 15
+journalctl > /root/logsUpload/upload/logs/server_name.log
+sleep 60
 
-tar -czvf $FULLNAME /root/logs
-sleep 15
+tar -czvf $FULLNAME /root/logsUpload/upload/logs
+sleep 30
 
-cp /root/$FULLNAME /root/archived_logs
+cp /root/$FULLNAME /root/logsUpload/upload/archived_logs
