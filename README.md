@@ -16,7 +16,7 @@
 - On the server create a project folder, i.e. `logsUpload`
 - cd `logsUpload`
 - git clone <project>
-- Configure `config/default.json`:\
+- Configure `config/default.json`
     + Modify `config/default.json` to point `folderId` to your Google Drive folder you're going to upload logs into
     + `logPath` remains as default unless customization is needed
     + Modify `config/default.json` to state the prefix the logs on the server start with - `name_server`
@@ -40,8 +40,8 @@
 If cron is configured, the process will be run on schedule
 
 
-### Extra preps steps
+### Extra prep steps
 
-Before running on a server, run it in your local so that you get a `token.json` after you're authorized via browser. Then copy over the token onto the server into the project's root directory\
+Before running on a server, run it in your local so that you get a `token.json` after you're authorized via browser. Then copy over the token onto the server into the project's root directory
 
 `export OPENSSL_CONF=/dev/null` fixes some oauth2 issues during upload
